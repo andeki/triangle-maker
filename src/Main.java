@@ -9,8 +9,7 @@ public class Main {
         System.out.print("Enter size: ");
         int size = s.nextInt();
 
-        while (size > 50)
-        {
+        while (size > 50 || size < 0) {
             //if size is above 50, reprompts user for a lower value
             System.out.print("Invalid size, must be 1-50. Re-enter size: ");
             size = s.nextInt();
@@ -23,14 +22,11 @@ public class Main {
         //loop for size, print spaces to give triangle shape then fill an opposite amount of spaces and characters
         //could method this loop for more shapes utilizing loops, like rectangles
 
-        for (int i = 1; i <= size; i++)
-        {
-            for (int j = size; j >= i; j--)
-            {
+        for (int i = 1; i <= size; i++) {
+            for (int j = size; j >= i; j--) {
                 System.out.print(" ");
             }
-            for (int k = 1; k <= i; k++)
-            {
+            for (int k = 1; k <= i; k++) {
                 System.out.print(fill + " ");
             }
             //new line for restarting loop
